@@ -67,9 +67,9 @@ function check_key() {
 function notify() {
     if [ "$no_notify" == "false" ]; then
 	if is_mac; then
-		/usr/local/bin/terminal-notifier -title owo.whats-th.is -message "${1}" -appIcon $owodir/icon.icns
+		/usr/local/bin/terminal-notifier -title b1nzy.ratelimited.me -message "${1}" -appIcon $owodir/icon.icns
 	else
-		notify-send owo.whats-th.is "${1}" -i $owodir/icon.png
+		notify-send b1nzy.ratelimited.me "${1}" -i $owodir/icon.png
 	fi
    fi
 }
@@ -197,7 +197,7 @@ function shorten() {
 	#Check if the URL entered is valid.
 	regex='(https?|ftp|file)://[-A-Za-z0-9\+&@#/%?=~_|!:,.;]*[-A-Za-z0-9\+&@#/%=~_|]'
 	if [[ $url =~ $regex ]]; then
-		result=$(curl -s "https://api.awau.moe/shorten/polr?action=shorten&key=$key&url=$url")
+		result=$(curl -s "https://api.ratelimited.me/api/shorten/polr?action=shorten&key=$key&url=$url")
 
 		#Check if the URL got sucessfully shortened.
 		if grep -q "https://" <<< "${result}"; then
@@ -239,7 +239,7 @@ function screenshot() {
 
 	# Open our new entry to use it!
 	entry=$path$filename
-	upload=$(curl -s -F "files[]=@"$entry";type=image/png" https://api.awau.moe/upload/pomf?key="$key")
+	upload=$(curl -s -F "files[]=@"$entry";type=image/png" https://api.ratelimited.me/api/upload/pomf?key="$key")
 
 	if [ "$print_debug" = true ] ; then
 		echo $upload
