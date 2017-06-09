@@ -285,7 +285,7 @@ function upload() {
 
 		filesize=$(wc -c <"$entry")
 		if [[ $filesize -le 83886081 ]]; then
-			upload=$(curl -s -F "files[]=@"$entry";type=$mimetype" https://api.awau.moe/upload/pomf?key="$key")
+			upload=$(curl -s -F "files[]=@"$entry";type=$mimetype" https://api.ratelimited.me/api/upload/pomf?key="$key")
 			item="$(egrep -o '"url":\s*"[^"]+"' <<<"${upload}" | cut -d "\"" -f 4)"
 		else
 			echo "ERROR : File size too large or another error occured!"
