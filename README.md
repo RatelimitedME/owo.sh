@@ -1,6 +1,6 @@
 # owo.sh
 
-A basic example/uploader for uploading to [owo-whats-th.is](https://owo.whats-th.is)'s image server. The aim was to have a script that allowed for users of all operating systems (that werent already supported by ShareX) to also be able to upload to whats-th.is related products.
+A basic example/uploader for uploading to [ratelimited.me](https://ratelimited.me)'s image server. The aim was to have a script that allowed for users of all operating systems (that werent already supported by ShareX) to also be able to upload to whats-th.is related products.
 
 Thank you to [jomo](https://github.com/jomo/) and his script [jomo/imgur-screenshot](https://github.com/jomo/imgur-screenshot), to which taking snippets and borrowing code has guided me to improving my own script. This script wouldn't be anywhere near what it is today without his efforts.
 
@@ -23,7 +23,7 @@ Thank you to [jomo](https://github.com/jomo/) and his script [jomo/imgur-screens
 
 ## Instructions
 
-1. Clone the repo with `git clone https://github.com/whats-this/owo.sh.git`
+1. Clone the repo with `git clone https://github.com/RatelimitedME/owo.sh.git`
 2. Make sure `script.sh` has permissions: `chmod a+x script.sh`.
 3. Download the dependencies, you can check what you need with `./script.sh --check`
 4. Put your token inside of `conf.cfg`, in `userkey="YOURUSERKEY"`
