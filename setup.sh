@@ -15,6 +15,7 @@
 # "owo file.png" command from anywhere in your terminal
 # client and for it to work.
 
+
 ##################################
 if [ ! $(id -u) -ne 0 ]; then
  	echo "ERROR : This script cannot be run as sudo."
@@ -34,7 +35,7 @@ fi
 
 ##################################
 
-scriptdir=$(dirname $(which $0))
+scriptdir=$(dirname $(readlink -f $0))
 owodir="$HOME/.config/owo"
 
 if [ -d $owodir ]; then
@@ -42,7 +43,7 @@ if [ -d $owodir ]; then
 fi
 
 if [ ! -d $owodir ]; then
-	mkdir $owodir
+	mkdir -p $owodir
 fi
 
 cp -r $scriptdir/* $owodir
@@ -64,10 +65,10 @@ if is_mac; then
 	echo "INFO  : Dependencies are unavaliable for Mac."
 	echo "INFO  : Please run \"owo --check\" to check later on."
 else
-	(which notify-send &>/dev/null && echo "FOUND : found notify-send") || sudo apt-get install notify-send
-	(which maim &>/dev/null && echo "FOUND : found maim") || sudo apt-get install maim
-	(which xclip &>/dev/null && echo "FOUND : found xclip") || sudo apt-get install xclip
-	(which scrot &>/dev/null && echo "FOUND : found scrot") || sudo apt-get install scrot
+	(which notify-send &>/dev/null && echo "FOUND : found notify-send") || echo "Notify-send not found. Please install it via your package manager." && exit 1
+	(which maim &>/dev/null && echo "FOUND : found maim") || echo "Maim not found. Please install it via your package manager." && exit 1
+	(which xclip &>/dev/null && echo "FOUND : found xclip") || echo "Xclip not found. Please install it via your package manager." && exit 1
+	(which slop &>/dev/null && echo "FOUND : found scrot") || echo "Slop not found. Please install via your package manager." && exit 1
 fi
 
 # Tell the user its done!
