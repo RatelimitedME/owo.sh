@@ -1,12 +1,16 @@
-sudo: required
-language: generic
-
-services:
-  - docker
-
+dist: trusty
+group: edge
+language: bash
+addons:
+  apt:
+    packages:
+    - shellcheck
+    - maim
+    - slop
+    - xclip
+    - libnotify-bin
 script:
-  - wget -O- http://travis.debian.net/script.sh | sh -
-
-branches:
-  except:
-    - /^debian\/\d/
+  - bash setup.sh
+  - sed -i /userkey=/c\userkey="$key" $HOME/.config/owo/conf.cfg
+  - bash script.sh script.sh
+sudo: required
