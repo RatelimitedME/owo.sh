@@ -34,8 +34,16 @@ if [ "${1}" = "--uninstall" ]; then
 fi
 
 ##################################
+function is_mac() {
+	uname | grep -q "Darwin"
+}
 
-scriptdir=$(dirname $(readlink -f $0))
+if is_mac; then
+	scriptdir=$(dirname $(greadlink -f $0))
+else
+	scriptdir=$(dirname $(readlink -f $0))
+fi
+
 owodir="$HOME/.config/owo"
 
 if [ -d $owodir ]; then
@@ -55,14 +63,11 @@ chown -R $(whoami | awk '{print $1}') $owodir
 if [ ! -f /usr/local/bin/owo ]; then
   sudo ln -s $owodir/script.sh /usr/local/bin/owo
 fi
-function is_mac() {
-	uname | grep -q "Darwin"
-}
 
 
 # Install dependencies
 if is_mac; then
-	echo "INFO  : Dependencies are unavaliable for Mac."
+	echo "INFO  : Dependencies are unavailable for Mac."
 	echo "INFO  : Please run \"owo --check\" to check later on."
 else
 	(which notify-send &>/dev/null && echo "FOUND : found notify-send") || echo "Notify-send not found. Please install it via your package manager." && exit 1
