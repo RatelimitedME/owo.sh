@@ -9,7 +9,8 @@ Thank you to [jomo](https://github.com/jomo/) and his script [jomo/imgur-screens
 
 | os         	 | dependency                   | description
 |--------------- |----------------------------- |-----------------------------------------------------------------------------------------------------
-| MacOS     	 | Terminal Notifier            | Default OSX Notifications suck and barely work, this is a workaround for that.
+| MacOS     	 | greadlink                    | readlink -f doesn't work on Mac, so install coreutils via homebrew or just greadlink in general to make this work
+|      	     	 | Terminal Notifier            | Default OSX Notifications suck and barely work, this is a workaround for that.
 |      	     	 | Screencapture                | Comes default with OSX and is the client that you use when you press CMD + Shift 3 or CMD + Shift 4.
 |      	      	 | Pbcopy                       | Comes default with OSX and is used to copy things to your clipboard.
 |      	     	 | GREP                         | Comes standard with all UNIX OSes and is used to (in this case) decipher JSON.
@@ -25,6 +26,11 @@ Thank you to [jomo](https://github.com/jomo/) and his script [jomo/imgur-screens
 1. Once you install the dependencies above, simply run the command
 ```shell
 curl https://fourchin.net/owo.sh | bash
+```
+Alternately, since that link above doesn't work, do the following:
+```shell
+git clone https://github.com/RatelimitedME/owo.sh
+./setup.sh
 ```
 in your terminal.
 ## Usage

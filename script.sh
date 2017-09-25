@@ -413,6 +413,7 @@ fi
 
 if [ "${1}" = "-c" ] || [ "${1}" = "--check" ]; then
 	if is_mac; then
+		(which greadlink &>/dev/null && echo "FOUND : found greadlink") || echo "ERROR : greadlink not found"
 		(which terminal-notifier &>/dev/null && echo "FOUND : found terminal-notifier") || echo "ERROR : terminal-notifier not found"
 		(which screencapture &>/dev/null && echo "FOUND : found screencapture") || echo "ERROR : screencapture not found"
 		(which pbcopy &>/dev/null && echo "FOUND : found pbcopy") || echo "ERROR : pbcopy not found"
