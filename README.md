@@ -18,7 +18,7 @@ Thank you to [jomo](https://github.com/jomo/) and his script [jomo/imgur-screens
 |       	 | Maim                         | A rich screenshotting client, that better than what comes default with Linux.
 |     	     	 | XClip                        | Comes default with most UNIX based OSes and allows for things to copied to clipboards.
 |      	     	 | GREP                         | Comes standard with all UNIX OSes and is used to (in this case) decipher JSON.
-|     	      	 | cURL                         | Comes standard with all UNIX OSes and is used to (in this case) upload to the owo server.
+|     	      	 | cURL                         | Comes standard with all UNIX OSes and is used to (in this case) upload to the rlme server.
 
 ## Installation
 
