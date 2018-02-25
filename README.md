@@ -1,5 +1,4 @@
 # OwO.sh
-[![Build Status](https://travis-ci.org/whats-this/owo.sh.svg?branch=master)](https://travis-ci.org/whats-this/owo.sh)
 
 A basic example/uploader for uploading to [ratelimited.me](https://ratelimited.me)'s image server. The aim was to have a script that allowed for users of all operating systems (that werent already supported by ShareX) to also be able to upload to whats-th.is related products.
 
@@ -14,20 +13,16 @@ Thank you to [jomo](https://github.com/jomo/) and his script [jomo/imgur-screens
 |      	     	 | Screencapture                | Comes default with OSX and is the client that you use when you press CMD + Shift 3 or CMD + Shift 4.
 |      	      	 | Pbcopy                       | Comes default with OSX and is used to copy things to your clipboard.
 |      	     	 | GREP                         | Comes standard with all UNIX OSes and is used to (in this case) decipher JSON.
-|      	     	 | cURL                         | Comes standard with all UNIX OSes and is used to (in this case) upload to the owo server.
+|      	     	 | cURL                         | Comes standard with all UNIX OSes and is used to (in this case) upload to the RLME server.
 | Linux     	 | Notify-Send                  | Default Linux barely has any, if at all, notification support from terminal. This is a workaround.
 |       	 | Maim                         | A rich screenshotting client, that better than what comes default with Linux.
 |     	     	 | XClip                        | Comes default with most UNIX based OSes and allows for things to copied to clipboards.
 |      	     	 | GREP                         | Comes standard with all UNIX OSes and is used to (in this case) decipher JSON.
-|     	      	 | cURL                         | Comes standard with all UNIX OSes and is used to (in this case) upload to the owo server.
+|     	      	 | cURL                         | Comes standard with all UNIX OSes and is used to (in this case) upload to the rlme server.
 
 ## Installation
 
-1. Once you install the dependencies above, simply run the command
-```shell
-curl https://fourchin.net/owo.sh | bash
-```
-Alternately, since that link above doesn't work, do the following:
+1. Once you have installed the dependencies, do the following:
 ```shell
 git clone https://github.com/RatelimitedME/owo.sh
 ./setup.sh
