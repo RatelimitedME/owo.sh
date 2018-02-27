@@ -52,6 +52,7 @@ fi
 
 if [ ! -d $owodir ]; then
 	mkdir -p $owodir
+	sudo chown -R $USER:$USER $owodir
 fi
 
 cp -r $scriptdir/* $owodir
