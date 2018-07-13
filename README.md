@@ -8,12 +8,12 @@ Thank you to [jomo](https://github.com/jomo/) and his script [jomo/imgur-screens
 
 | os         	 | dependency                   | description
 |--------------- |----------------------------- |-----------------------------------------------------------------------------------------------------
-| macOS     	 | greadlink                    | readlink -f doesn't work on macOS, so install coreutils via homebrew or just greadlink in general to make this work
-|      	     	 | Terminal Notifier            | Default macOS Notifications suck and barely work, this is a workaround for that.
-|      	     	 | Screencapture                | Comes default with macOS and is the client that you use when you press CMD + Shift 3 or CMD + Shift 4.
-|      	      	 | Pbcopy                       | Comes default with macOS and is used to copy things to your clipboard.
-|      	     	 | GREP                         | Comes standard with all UNIX OSes and is used to (in this case) decipher JSON.
-|      	     	 | cURL                         | Comes standard with all UNIX OSes and is used to (in this case) upload to the RLME server.
+| macOS     	 | greadlink                    | `readlink -f` doesn't ship on macOS, so you'll need to install it through Homebrew (`$ brew install coreutils`)
+|      	     	 | Terminal Notifier            | Improves macOS notifications (`$ brew install terminal-notifier`)
+|      	     	 | Screencapture                | macOS default screenshot package (shipped with macOS)
+|      	      	 | Pbcopy                       | macOS default clipboard control package (shipped with macOS)
+|      	     	 | GREP                         | JSON decipher for UNIX systems (shipped with macOS)
+|      	     	 | cURL                         | HTTP requests for UNIX systems (shipped with macOS)
 | Linux     	 | Notify-Send                  | Default Linux barely has any, if at all, notification support from terminal. This is a workaround.
 |       	 | Maim                         | A rich screenshotting client, that better than what comes default with Linux.
 |     	     	 | XClip                        | Comes default with most UNIX based OSes and allows for things to copied to clipboards.
