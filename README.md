@@ -8,10 +8,10 @@ Thank you to [jomo](https://github.com/jomo/) and his script [jomo/imgur-screens
 
 | os         	 | dependency                   | description
 |--------------- |----------------------------- |-----------------------------------------------------------------------------------------------------
-| MacOS     	 | greadlink                    | readlink -f doesn't work on Mac, so install coreutils via homebrew or just greadlink in general to make this work
-|      	     	 | Terminal Notifier            | Default OSX Notifications suck and barely work, this is a workaround for that.
-|      	     	 | Screencapture                | Comes default with OSX and is the client that you use when you press CMD + Shift 3 or CMD + Shift 4.
-|      	      	 | Pbcopy                       | Comes default with OSX and is used to copy things to your clipboard.
+| macOS     	 | greadlink                    | readlink -f doesn't work on macOS, so install coreutils via homebrew or just greadlink in general to make this work
+|      	     	 | Terminal Notifier            | Default macOS Notifications suck and barely work, this is a workaround for that.
+|      	     	 | Screencapture                | Comes default with macOS and is the client that you use when you press CMD + Shift 3 or CMD + Shift 4.
+|      	      	 | Pbcopy                       | Comes default with macOS and is used to copy things to your clipboard.
 |      	     	 | GREP                         | Comes standard with all UNIX OSes and is used to (in this case) decipher JSON.
 |      	     	 | cURL                         | Comes standard with all UNIX OSes and is used to (in this case) upload to the RLME server.
 | Linux     	 | Notify-Send                  | Default Linux barely has any, if at all, notification support from terminal. This is a workaround.
